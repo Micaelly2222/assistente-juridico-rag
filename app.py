@@ -52,8 +52,8 @@ with st.sidebar:
 tab_ask, tab_agent, tab_search, tab_eval = st.tabs(["Perguntar", "Agente", "Busca", "Avaliação"])
 
 with tab_ask:
-    example = st.selectbox("Exemplos", [""] + EXAMPLES, key="ex_ask")
-    question = st.text_input("Sua pergunta", value=example, key="q_ask")
+    example = st.selectbox("Exemplos", EXAMPLES, index=None, placeholder="Escolha uma pergunta de exemplo", key="ex_ask")
+    question = st.text_input("Sua pergunta", value=example or "", key="q_ask")
     if st.button("Responder", type="primary") and question:
         with st.spinner("Buscando os artigos..."):
             result = answer(question, retriever(), law=law_key)

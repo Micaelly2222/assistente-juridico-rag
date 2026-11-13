@@ -8,7 +8,7 @@
 
 **Ask questions about Brazil's data protection law (LGPD), consumer code (CDC) and internet law (Marco Civil) and get answers grounded in the exact article, with citations that are checked before they reach the user.**
 
-**Live demo:** https://assistente-juridico-rag.streamlit.app
+![Assistant answering with the cited article](docs/app.png)
 
 ### What it does
 
@@ -84,7 +84,7 @@ Python, RAG (Retrieval-Augmented Generation), AI agents, tool use / function cal
 
 **Faça perguntas sobre a LGPD, o Código de Defesa do Consumidor e o Marco Civil da Internet e receba respostas baseadas no artigo exato da lei, com citações verificadas antes de chegar ao usuário.**
 
-**Demo online:** https://assistente-juridico-rag.streamlit.app
+![Assistente respondendo com o artigo citado](docs/app.png)
 
 ### O que faz
 
