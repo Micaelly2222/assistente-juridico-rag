@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -v
+      - name: Avaliação da busca (falha se o recall@5 híbrido cair abaixo de 0,85)
+        run: |
+          python -m rag.evaluate
+          python -c "import json; r={x['mode']: x for x in json.load(open('reports/retrieval_eval.json'))}; assert r['hybrid']['recall@5'] >= 0.85, r['hybrid']"

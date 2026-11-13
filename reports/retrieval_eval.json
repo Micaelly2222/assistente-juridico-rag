@@ -1,0 +1,41 @@
+[
+  {
+    "mode": "bm25",
+    "recall@1": 0.533,
+    "recall@3": 0.8,
+    "recall@5": 0.833,
+    "mrr@10": 0.657,
+    "misses_top5": [
+      "Preciso avisar a autoridade quando houver vazamento de dados?",
+      "Quando o tratamento de dados pessoais deve terminar?",
+      "Quando é permitido enviar dados pessoais para outro país?",
+      "Quais práticas são proibidas ao fornecedor, como venda casada?",
+      "Por quanto tempo aplicativos e sites devem guardar os registros de acesso?"
+    ]
+  },
+  {
+    "mode": "dense",
+    "recall@1": 0.633,
+    "recall@3": 0.867,
+    "recall@5": 0.867,
+    "mrr@10": 0.748,
+    "misses_top5": [
+      "Em quantos dias o fornecedor deve consertar o vício do produto antes de eu pedir a troca?",
+      "Fui cobrado por um valor que não devia. Tenho direito à devolução em dobro?",
+      "Quando o juiz pode inverter o ônus da prova a favor do consumidor?",
+      "Quais direitos tem o usuário de internet no Brasil?"
+    ]
+  },
+  {
+    "mode": "hybrid",
+    "recall@1": 0.7,
+    "recall@3": 0.8,
+    "recall@5": 0.9,
+    "mrr@10": 0.78,
+    "misses_top5": [
+      "Quando o tratamento de dados pessoais deve terminar?",
+      "Quando o juiz pode inverter o ônus da prova a favor do consumidor?",
+      "Quais direitos tem o usuário de internet no Brasil?"
+    ]
+  }
+]
